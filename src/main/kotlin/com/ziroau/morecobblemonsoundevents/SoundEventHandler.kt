@@ -59,9 +59,17 @@ object SoundEventHandler {
             }
         }
         CobblemonEvents.BATTLE_FLED.subscribe { event ->
+            val fledSound: SoundEvent =
+                if (event.battle.isPvW)
+                    ModSounds.BATTLE_PVW_FLED
+                else if (event.battle.isPvP)
+                    ModSounds.BATTLE_PVP_FLED
+                else
+                    ModSounds.BATTLE_PVN_FLED
+
             val player = event.player.entity
             player?.playSoundToPlayer(
-                ModSounds.BATTLE_PVN_FLED,
+                fledSound,
                 SOUND_CATEGORY,
                 1.0f,
                 1.0f
