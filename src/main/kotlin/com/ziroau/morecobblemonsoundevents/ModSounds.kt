@@ -30,6 +30,16 @@ object ModSounds {
     val STARTER_CHOSEN = registerSound("pokemon.starter_chosen")
     val BATTLE_FAINTED = registerSound("battle.fainted")
 
+    // via mixin
+    @JvmField
+    val BATTLE_INVITE = registerSound("player.battle_invite")
+    @JvmField
+    val BATTLE_ACCEPT = registerSound("player.battle_accept")
+    @JvmField
+    val TRADE_INVITE = registerSound("player.trade_invite")
+    @JvmField
+    val TRADE_ACCEPT = registerSound("player.trade_accept")
+
     fun register() {
         sounds.forEach { entry ->
             Registry.register(

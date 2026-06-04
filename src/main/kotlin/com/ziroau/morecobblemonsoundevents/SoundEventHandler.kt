@@ -7,6 +7,7 @@ import net.minecraft.sound.SoundCategory
 import net.minecraft.sound.SoundEvent
 
 object SoundEventHandler {
+    @JvmField
     val SOUND_CATEGORY = SoundCategory.MASTER
     fun register() {
         CobblemonEvents.BATTLE_VICTORY.subscribe { event ->

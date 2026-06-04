@@ -31,5 +31,17 @@
     },
     "pokemon.starter_chosen": {
         "sounds": []
+    },
+    "player.battle_invite": {
+        "sounds": []
+    },
+    "player.battle_accept": {
+        "sounds": []
+    },
+    "player.trade_invite": {
+        "sounds": []
+    },
+    "player.trade_accept": {
+        "sounds": []
     }
 }
