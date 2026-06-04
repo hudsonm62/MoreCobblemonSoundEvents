@@ -36,17 +36,17 @@ object SoundEventHandler {
             val losingPlayers = event.losers
                 .filterIsInstance<PlayerBattleActor>()
                 .mapNotNull { it.entity }
+
+            val lossSound: SoundEvent =
+                if (event.battle.isPvW)
+                    ModSounds.BATTLE_PVW_LOSS
+                else if (event.battle.isPvP)
+                    ModSounds.BATTLE_PVP_LOSS
+                else
+                    ModSounds.BATTLE_PVN_LOSS
                 
             if(losingPlayers.isNotEmpty()){
                 losingPlayers.forEach { player ->
-                    val lossSound: SoundEvent =
-                        if (event.battle.isPvW)
-                            ModSounds.BATTLE_PVW_LOSS
-                        else if (event.battle.isPvP)
-                            ModSounds.BATTLE_PVP_LOSS
-                        else
-                            ModSounds.BATTLE_PVN_LOSS
-
                     player.playSoundToPlayer(
                         lossSound,
                         SOUND_CATEGORY,
