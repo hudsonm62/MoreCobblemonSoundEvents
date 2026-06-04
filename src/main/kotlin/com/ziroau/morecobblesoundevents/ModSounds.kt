@@ -17,9 +17,16 @@ object ModSounds {
         return sound
     }
 
-    val BATTLE_WIN = registerSound("battle.win")
-    val BATTLE_LOSS = registerSound("battle.loss")
-    val BATTLE_FLED = registerSound("battle.fled")
+    val BATTLE_PVN_WIN = registerSound("battle.pvn.win")
+    val BATTLE_PVN_LOSS = registerSound("battle.pvn.loss")
+    val BATTLE_PVN_FLED = registerSound("battle.pvn.fled")
+    val BATTLE_PVP_WIN = registerSound("battle.pvp.win")
+    val BATTLE_PVP_LOSS = registerSound("battle.pvp.loss")
+    val BATTLE_PVP_FLED = registerSound("battle.pvp.fled")
+    val BATTLE_PVW_WIN = registerSound("battle.pvw.win")
+    val BATTLE_PVW_LOSS = registerSound("battle.pvw.loss")
+    val BATTLE_PVW_FLED = registerSound("battle.pvw.fled")
+
     val MEGA_EVOLUTION = registerSound("pokemon.mega_evolution")
     val STARTER_CHOSEN = registerSound("pokemon.starter_chosen")
     val PKM_FAINTED = registerSound("pokemon.fainted")

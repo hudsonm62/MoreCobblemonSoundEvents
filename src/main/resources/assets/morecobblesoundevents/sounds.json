@@ -1,11 +1,29 @@
 {
-    "battle.win": {
+    "battle.pvn.win": {
         "sounds": []
     },
-    "battle.loss": {
+    "battle.pvp.win": {
         "sounds": []
     },
-    "battle.fled": {
+    "battle.pvw.win": {
+        "sounds": []
+    },
+    "battle.pvn.loss": {
+        "sounds": []
+    },
+    "battle.pvp.loss": {
+        "sounds": []
+    },
+    "battle.pvw.loss": {
+        "sounds": []
+    },
+    "battle.pvn.fled": {
+        "sounds": []
+    },
+    "battle.pvp.fled": {
+        "sounds": []
+    },
+    "battle.pvw.fled": {
         "sounds": []
     },
     "pokemon.mega_evolution": {

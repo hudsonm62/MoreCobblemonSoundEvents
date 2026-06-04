@@ -17,7 +17,7 @@ Then define the sound events you want to override or provide. For example:
 ```jsonc
 // CoolResourcePack/assets/morecobblesoundevents/sounds.json
 {
-  "battle.win": {
+  "battle.pvw.win": { // Player vs Wild battle win event
     "sounds": [
       {
         "name": "mod:sound/id",

@@ -3,6 +3,7 @@ package com.ziroau.morecobblesoundevents
 import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.battles.actor.PlayerBattleActor
 import net.minecraft.sound.SoundCategory
+import net.minecraft.sound.SoundEvent
 
 object SoundEventHandler {
     val SOUND_CATEGORY = SoundCategory.MASTER
@@ -12,36 +13,54 @@ object SoundEventHandler {
                 .filterIsInstance<PlayerBattleActor>()
                 .mapNotNull { it.entity }
 
-            // TODO: Different sounds if against player, wild, npc
-            // isPvP and such funcs exist
-            winningPlayers.forEach { player ->
-                player.playSoundToPlayer(
-                    ModSounds.BATTLE_WIN,
-                    SOUND_CATEGORY,
-                    1.0f,
-                    1.0f
-                )
-                MoreCobbleSoundEvents.logger.debug("MoreCobbleSoundEvents: Executed battle WIN sound event for player: ${player.name.string}")
+            if(winningPlayers.isNotEmpty()){
+                val winSound: SoundEvent = 
+                    if (event.battle.isPvW)
+                        ModSounds.BATTLE_PVW_WIN
+                    else if (event.battle.isPvP)
+                        ModSounds.BATTLE_PVP_WIN
+                    else
+                        ModSounds.BATTLE_PVN_WIN
+
+                winningPlayers.forEach { player ->
+                    player.playSoundToPlayer(
+                        winSound,
+                        SOUND_CATEGORY,
+                        1.0f,
+                        1.0f
+                    )
+                    MoreCobbleSoundEvents.logger.debug("MoreCobbleSoundEvents: Executed battle WIN sound event for player: ${player.name.string}")
+                }                
             }
 
             val losingPlayers = event.losers
                 .filterIsInstance<PlayerBattleActor>()
                 .mapNotNull { it.entity }
+                
+            if(losingPlayers.isNotEmpty()){
+                losingPlayers.forEach { player ->
+                    val lossSound: SoundEvent =
+                        if (event.battle.isPvW)
+                            ModSounds.BATTLE_PVW_LOSS
+                        else if (event.battle.isPvP)
+                            ModSounds.BATTLE_PVP_LOSS
+                        else
+                            ModSounds.BATTLE_PVN_LOSS
 
-            losingPlayers.forEach { player ->
-                player.playSoundToPlayer(
-                    ModSounds.BATTLE_LOSS,
-                    SOUND_CATEGORY,
-                    1.0f,
-                    1.0f
-                )
-                MoreCobbleSoundEvents.logger.debug("MoreCobbleSoundEvents: Executed battle LOSS sound event for player: ${player.name.string}")
+                    player.playSoundToPlayer(
+                        lossSound,
+                        SOUND_CATEGORY,
+                        1.0f,
+                        1.0f
+                    )
+                    MoreCobbleSoundEvents.logger.debug("MoreCobbleSoundEvents: Executed battle LOSS sound event for player: ${player.name.string}")
+                }                
             }
         }
         CobblemonEvents.BATTLE_FLED.subscribe { event ->
             val player = event.player.entity
             player?.playSoundToPlayer(
-                ModSounds.BATTLE_FLED,
+                ModSounds.BATTLE_PVN_FLED,
                 SOUND_CATEGORY,
                 1.0f,
                 1.0f
