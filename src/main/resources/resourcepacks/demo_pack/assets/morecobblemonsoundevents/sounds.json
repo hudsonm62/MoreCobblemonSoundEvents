@@ -1,0 +1,130 @@
+{
+    "battle.pvn.win": {
+        "sounds": [
+            {
+                "name": "ui.toast.challenge_complete",
+                "type": "event"
+            }
+        ]
+    },
+    "battle.pvp.win": {
+        "sounds": [
+            {
+                "name": "ui.toast.challenge_complete",
+                "type": "event"
+            }
+        ]
+    },
+    "battle.pvw.win": {
+        "sounds": [
+            {
+                "name": "ui.toast.challenge_complete",
+                "type": "event"
+            }
+        ]
+    },
+    "battle.pvn.loss": {
+        "sounds": [
+            {
+                "name": "entity.villager.no",
+                "type": "event"
+            }
+        ]
+    },
+    "battle.pvp.loss": {
+        "sounds": [
+            {
+                "name": "entity.villager.no",
+                "type": "event"
+            }
+        ]
+    },
+    "battle.pvw.loss": {
+        "sounds": [
+            {
+                "name": "entity.villager.no",
+                "type": "event"
+            }
+        ]
+    },
+    "battle.pvn.fled": {
+        "sounds": [
+            {
+                "name": "entity.enderman.teleport",
+                "type": "event"
+            }
+        ]
+    },
+    "battle.pvp.fled": {
+        "sounds": [
+            {
+                "name": "entity.enderman.teleport",
+                "type": "event"
+            }
+        ]
+    },
+    "battle.pvw.fled": {
+        "sounds": [
+            {
+                "name": "entity.enderman.teleport",
+                "type": "event"
+            }
+        ]
+    },
+    "battle.fainted": {
+        "sounds": [
+            {
+                "name": "entity.generic.death",
+                "type": "event"
+            }
+        ]
+    },
+    "pokemon.starter_chosen": {
+        "sounds": [
+            {
+                "name": "ui.toast.out",
+                "type": "event"
+            }
+        ]
+    },
+    "pokemon.mount": {
+        "sounds": [
+            {
+                "name": "entity.horse.saddle",
+                "type": "event"
+            }
+        ]
+    },
+    "player.battle_invite": {
+        "sounds": [
+            {
+                "name": "block.note_block.pling",
+                "type": "event"
+            }
+        ]
+    },
+    "player.battle_accept": {
+        "sounds": [
+            {
+                "name": "block.note_block.bell",
+                "type": "event"
+            }
+        ]
+    },
+    "player.trade_invite": {
+        "sounds": [
+            {
+                "name": "block.note_block.snare",
+                "type": "event"
+            }
+        ]
+    },
+    "player.trade_accept": {
+        "sounds": [
+            {
+                "name": "entity.experience_orb.pickup",
+                "type": "event"
+            }
+        ]
+    }
+}

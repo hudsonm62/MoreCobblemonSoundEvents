@@ -1,8 +1,8 @@
 # More Cobblemon Sound Events
 
-More Cobblemon Sound Events adds a collection of extra Cobblemon sound events, making it easier for resource pack and modpack creators to customize audio.
+Adds a collection of extra Cobblemon sound events, making it easier for both resourcepack and modpack creators to customise audio.
 
-**Important:** This mod does **not** include any sound files by default. It simply registers additional sound events that can be mapped to your own sounds through a resource pack.
+**Important:** This mod does **not** include any sound files by default. It simply registers additional sound events that can be mapped to your own sounds through a resource pack or other similar means.
 
 ## Usage
 

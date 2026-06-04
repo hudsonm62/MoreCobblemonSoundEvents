@@ -13,6 +13,7 @@ object MoreCobblemonSoundEvents : ModInitializer {
 	override fun onInitialize() {
 		ModSounds.register()
 		SoundEventHandler.register()
+		ResourcePackLoader.register()
 		logger.info("Loaded More Cobblemon Sound Events!")
 	}
 	fun id(path: String?): Identifier {
