@@ -32,6 +32,9 @@
     "pokemon.starter_chosen": {
         "sounds": []
     },
+    "pokemon.mount": {
+        "sounds": []
+    },
     "player.battle_invite": {
         "sounds": []
     },
