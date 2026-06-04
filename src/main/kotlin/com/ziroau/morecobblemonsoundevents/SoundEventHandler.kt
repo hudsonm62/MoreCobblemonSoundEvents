@@ -77,17 +77,6 @@ object SoundEventHandler {
             logger.debug("Executed battle FLED sound event for player: ${player?.name?.string}")
         }
 
-        CobblemonEvents.MEGA_EVOLUTION.subscribe { event ->
-            val player = event.pokemon.effectedPokemon.getOwnerPlayer()
-            player?.playSoundToPlayer(
-                ModSounds.MEGA_EVOLUTION,
-                SOUND_CATEGORY,
-                1.0f,
-                1.0f
-            )
-            logger.debug("Executed Mega Evolution sound event for player: ${player?.name?.string}")
-        }
-
         CobblemonEvents.STARTER_CHOSEN.subscribe { event ->
             val player = event.player
             player.playSoundToPlayer(

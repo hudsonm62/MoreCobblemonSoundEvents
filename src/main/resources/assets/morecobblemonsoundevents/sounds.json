@@ -29,9 +29,6 @@
     "battle.fainted": {
         "sounds": []
     },
-    "pokemon.mega_evolution": {
-        "sounds": []
-    },
     "pokemon.starter_chosen": {
         "sounds": []
     }
