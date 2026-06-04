@@ -29,7 +29,7 @@ object ModSounds {
 
     val MEGA_EVOLUTION = registerSound("pokemon.mega_evolution")
     val STARTER_CHOSEN = registerSound("pokemon.starter_chosen")
-    val PKM_FAINTED = registerSound("pokemon.fainted")
+    val BATTLE_FAINTED = registerSound("battle.fainted")
 
     fun register() {
         sounds.forEach { entry ->

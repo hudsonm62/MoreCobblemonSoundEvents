@@ -26,13 +26,13 @@
     "battle.pvw.fled": {
         "sounds": []
     },
+    "battle.fainted": {
+        "sounds": []
+    },
     "pokemon.mega_evolution": {
         "sounds": []
     },
     "pokemon.starter_chosen": {
-        "sounds": []
-    },
-    "pokemon.fainted": {
         "sounds": []
     }
 }

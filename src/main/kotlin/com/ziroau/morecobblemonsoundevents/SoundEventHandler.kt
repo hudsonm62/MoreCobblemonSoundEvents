@@ -90,15 +90,16 @@ object SoundEventHandler {
             MoreCobblemonSoundEvents.logger.debug("MoreCobblemonSoundEvents: Executed Starter Chosen sound event for player: ${player.name.string}")
         }
 
-        CobblemonEvents.POKEMON_FAINTED.subscribe { event ->
-            val player = event.pokemon.getOwnerPlayer()
-            player?.playSoundToPlayer(
-                ModSounds.PKM_FAINTED,
-                SOUND_CATEGORY,
-                1.0f,
-                1.0f
-            )
-            MoreCobblemonSoundEvents.logger.debug("MoreCobblemonSoundEvents: Executed Pokemon Fainted sound event for player: ${player?.name?.string}")
+        CobblemonEvents.BATTLE_FAINTED.subscribe { event ->
+            event.battle.players.forEach { player ->
+                player.playSoundToPlayer(
+                    ModSounds.BATTLE_FAINTED,
+                    SOUND_CATEGORY,
+                    1.0f,
+                    1.0f
+                )
+                MoreCobblemonSoundEvents.logger.debug("Executed Pokemon Fainted sound event for player: ${player.name?.string}")
+            }
         }
     }
 }
