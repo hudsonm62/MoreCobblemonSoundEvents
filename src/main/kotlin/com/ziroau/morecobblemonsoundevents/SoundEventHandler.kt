@@ -1,4 +1,4 @@
-package com.ziroau.morecobblesoundevents
+package com.ziroau.morecobblemonsoundevents
 
 import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.battles.actor.PlayerBattleActor
@@ -29,7 +29,7 @@ object SoundEventHandler {
                         1.0f,
                         1.0f
                     )
-                    MoreCobbleSoundEvents.logger.debug("MoreCobbleSoundEvents: Executed battle WIN sound event for player: ${player.name.string}")
+                    MoreCobblemonSoundEvents.logger.debug("MoreCobblemonSoundEvents: Executed battle WIN sound event for player: ${player.name.string}")
                 }                
             }
 
@@ -53,7 +53,7 @@ object SoundEventHandler {
                         1.0f,
                         1.0f
                     )
-                    MoreCobbleSoundEvents.logger.debug("MoreCobbleSoundEvents: Executed battle LOSS sound event for player: ${player.name.string}")
+                    MoreCobblemonSoundEvents.logger.debug("MoreCobblemonSoundEvents: Executed battle LOSS sound event for player: ${player.name.string}")
                 }                
             }
         }
@@ -65,7 +65,7 @@ object SoundEventHandler {
                 1.0f,
                 1.0f
             )
-            MoreCobbleSoundEvents.logger.debug("MoreCobbleSoundEvents: Executed battle FLED sound event for player: ${player?.name?.string}")
+            MoreCobblemonSoundEvents.logger.debug("MoreCobblemonSoundEvents: Executed battle FLED sound event for player: ${player?.name?.string}")
         }
 
         CobblemonEvents.MEGA_EVOLUTION.subscribe { event ->
@@ -76,7 +76,7 @@ object SoundEventHandler {
                 1.0f,
                 1.0f
             )
-            MoreCobbleSoundEvents.logger.debug("MoreCobbleSoundEvents: Executed Mega Evolution sound event for player: ${player?.name?.string}")
+            MoreCobblemonSoundEvents.logger.debug("MoreCobblemonSoundEvents: Executed Mega Evolution sound event for player: ${player?.name?.string}")
         }
 
         CobblemonEvents.STARTER_CHOSEN.subscribe { event ->
@@ -87,7 +87,7 @@ object SoundEventHandler {
                 1.0f,
                 1.0f
             )
-            MoreCobbleSoundEvents.logger.debug("MoreCobbleSoundEvents: Executed Starter Chosen sound event for player: ${player.name.string}")
+            MoreCobblemonSoundEvents.logger.debug("MoreCobblemonSoundEvents: Executed Starter Chosen sound event for player: ${player.name.string}")
         }
 
         CobblemonEvents.POKEMON_FAINTED.subscribe { event ->
@@ -98,7 +98,7 @@ object SoundEventHandler {
                 1.0f,
                 1.0f
             )
-            MoreCobbleSoundEvents.logger.debug("MoreCobbleSoundEvents: Executed Pokemon Fainted sound event for player: ${player?.name?.string}")
+            MoreCobblemonSoundEvents.logger.debug("MoreCobblemonSoundEvents: Executed Pokemon Fainted sound event for player: ${player?.name?.string}")
         }
     }
 }

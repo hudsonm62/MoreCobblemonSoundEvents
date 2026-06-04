@@ -1,4 +1,4 @@
-package com.ziroau.morecobblesoundevents
+package com.ziroau.morecobblemonsoundevents
 
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
@@ -10,7 +10,7 @@ object ModSounds {
     private val sounds = mutableListOf<CobbleSound>()
 
     private fun registerSound(path: String): SoundEvent {
-        val id = MoreCobbleSoundEvents.id(path)
+        val id = MoreCobblemonSoundEvents.id(path)
         val sound = SoundEvent.of(id)
 
         sounds += CobbleSound(id, sound)

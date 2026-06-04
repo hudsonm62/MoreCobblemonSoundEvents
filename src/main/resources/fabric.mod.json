@@ -1,22 +1,22 @@
 {
     "schemaVersion": 1,
-    "id": "morecobblesoundevents",
+    "id": "morecobblemonsoundevents",
     "version": "${version}",
-    "name": "More Cobble Sound Events",
-    "description": "Adds a collection of extra Cobblemon sound events, making it easier for resource pack and modpack creators to customize audio.",
+    "name": "More Cobblemon Sound Events",
+    "description": "Adds a collection of extra Cobblemon sound events, making it easier for resourcepack and modpack creators to customise audio.",
     "authors": ["Hudson M."],
     "contact": {
-        "homepage": "https://github.com/hudsonm62/MoreCobbleSoundEvents",
-        "sources": "https://github.com/hudsonm62/MoreCobbleSoundEvents",
-        "issues": "https://github.com/hudsonm62/MoreCobbleSoundEvents/issues"
+        "homepage": "https://modrinth.com/mod/morecobblemonsoundevents",
+        "sources": "https://github.com/hudsonm62/MoreCobblemonSoundEvents",
+        "issues": "https://github.com/hudsonm62/MoreCobblemonSoundEvents/issues"
     },
     "license": "Apache License 2.0",
-    "icon": "assets/morecobblesoundevents/icon.png",
+    "icon": "assets/morecobblemonsoundevents/icon.png",
     "environment": "*",
     "entrypoints": {
         "main": [
             {
-                "value": "com.ziroau.morecobblesoundevents.MoreCobbleSoundEvents",
+                "value": "com.ziroau.morecobblemonsoundevents.MoreCobblemonSoundEvents",
                 "adapter": "kotlin"
             }
         ]
