@@ -1,0 +1,20 @@
+{
+    "battle.win": {
+        "sounds": []
+    },
+    "battle.loss": {
+        "sounds": []
+    },
+    "battle.fled": {
+        "sounds": []
+    },
+    "pokemon.mega_evolution": {
+        "sounds": []
+    },
+    "pokemon.starter_chosen": {
+        "sounds": []
+    },
+    "pokemon.fainted": {
+        "sounds": []
+    }
+}

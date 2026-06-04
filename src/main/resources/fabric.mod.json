@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "morecobblesoundevents",
+    "version": "${version}",
+    "name": "More Cobble Sound Events",
+    "description": "Adds a collection of extra Cobblemon sound events, making it easier for resource pack and modpack creators to customize audio.",
+    "authors": ["Hudson M."],
+    "contact": {
+        "homepage": "https://github.com/hudsonm62/MoreCobbleSoundEvents",
+        "sources": "https://github.com/hudsonm62/MoreCobbleSoundEvents",
+        "issues": "https://github.com/hudsonm62/MoreCobbleSoundEvents/issues"
+    },
+    "license": "Apache License 2.0",
+    "icon": "assets/morecobblesoundevents/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            {
+                "value": "com.ziroau.morecobblesoundevents.MoreCobbleSoundEvents",
+                "adapter": "kotlin"
+            }
+        ]
+    },
+    "depends": {
+        "fabricloader": ">=0.19.2",
+        "minecraft": "~1.21.1",
+        "java": ">=21",
+        "fabric-api": "*",
+        "fabric-language-kotlin": "*"
+    }
+}

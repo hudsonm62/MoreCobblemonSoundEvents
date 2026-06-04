@@ -1,0 +1,43 @@
+name: 🧪 CI Flow
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: ⚙️ Checkout code
+        uses: actions/checkout@v6
+
+      - name: ⚙️ Setup JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: 25
+          distribution: microsoft
+
+      - name: ⚙️ Setup Gradle
+        uses: gradle/actions/setup-gradle@v6
+
+      - name: ⚙️ Make Gradlew Executable
+        shell: bash
+        run: chmod +x ./gradlew
+
+      - name: 🔨 Build Mod
+        shell: bash
+        run: ./gradlew build
+
+      - name: 🩹 Get Short SHA
+        id: short-sha
+        uses: hudsonm62/short-sha@v1
+
+      - name: 📤 Upload Mod Artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: MoreCobbleSoundEvents-${{ steps.short-sha.outputs.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: build/libs/*.jar
+          if-no-files-found: error
+          compression-level: 9
