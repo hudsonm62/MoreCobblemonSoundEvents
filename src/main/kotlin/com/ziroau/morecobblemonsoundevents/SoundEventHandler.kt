@@ -118,5 +118,15 @@ object SoundEventHandler {
                 }
             }
         }
+        CobblemonEvents.POKEMON_CAPTURED.subscribe { event ->
+            val player = event.player
+            player.playSoundToPlayer(
+                ModSounds.PKM_CAPTURED,
+                PKMSOUND_CATEGORY,
+                1.0f,
+                1.0f
+            )
+            logger.debug("Executed Pokemon Captured sound event for player: ${player.name?.string}")
+        }
     }
 }

@@ -38,6 +38,9 @@
     "pokemon.dismount": {
         "sounds": []
     },
+    "pokemon.captured": {
+        "sounds": []
+    },
     "player.battle_invite": {
         "sounds": []
     },

@@ -26,9 +26,9 @@ object ModSounds {
     val BATTLE_PVW_WIN = registerSound("battle.pvw.win")
     val BATTLE_PVW_LOSS = registerSound("battle.pvw.loss")
     val BATTLE_PVW_FLED = registerSound("battle.pvw.fled")
-
     val STARTER_CHOSEN = registerSound("pokemon.starter_chosen")
     val BATTLE_FAINTED = registerSound("battle.fainted")
+    val PKM_CAPTURED = registerSound("pokemon.captured")
 
     // via mixin
     @JvmField
