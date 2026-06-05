@@ -35,6 +35,9 @@
     "pokemon.mount": {
         "sounds": []
     },
+    "pokemon.dismount": {
+        "sounds": []
+    },
     "player.battle_invite": {
         "sounds": []
     },

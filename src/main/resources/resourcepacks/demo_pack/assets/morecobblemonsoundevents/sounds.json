@@ -95,6 +95,14 @@
             }
         ]
     },
+    "pokemon.dismount": {
+        "sounds": [
+            {
+                "name": "entity.horse.saddle",
+                "type": "event"
+            }
+        ]
+    },
     "player.battle_invite": {
         "sounds": [
             {

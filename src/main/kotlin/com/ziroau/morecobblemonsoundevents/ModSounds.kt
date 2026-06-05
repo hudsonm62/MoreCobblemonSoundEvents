@@ -41,6 +41,8 @@ object ModSounds {
     val TRADE_ACCEPT = registerSound("player.trade_accept")
     @JvmField
     val PKM_MOUNT = registerSound("pokemon.mount")
+    @JvmField
+    val PKM_DISMOUNT = registerSound("pokemon.dismount")
 
     fun register() {
         sounds.forEach { entry ->
