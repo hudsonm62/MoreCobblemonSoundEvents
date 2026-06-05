@@ -8,7 +8,9 @@ import net.minecraft.sound.SoundEvent
 
 object SoundEventHandler {
     @JvmField
-    val SOUND_CATEGORY = SoundCategory.MASTER
+    val SOUND_CATEGORY = SoundCategory.MASTER // everything else
+    @JvmField
+    val PKMSOUND_CATEGORY = SoundCategory.NEUTRAL // for sounds originating from mons
     fun register() {
         CobblemonEvents.BATTLE_VICTORY.subscribe { event ->
             val winningPlayers = event.winners
@@ -90,14 +92,30 @@ object SoundEventHandler {
         }
 
         CobblemonEvents.BATTLE_FAINTED.subscribe { event ->
-            event.battle.players.forEach { player ->
-                player.playSoundToPlayer(
+            val pkmEntity = event.killed.effectedPokemon.entity
+            if(pkmEntity != null){
+                // play in world if entity still valid
+                val thisWorld = pkmEntity.world
+                thisWorld.playSoundFromEntity(
+                    null,
+                    pkmEntity,
                     ModSounds.BATTLE_FAINTED,
-                    SOUND_CATEGORY,
+                    PKMSOUND_CATEGORY,
                     1.0f,
                     1.0f
                 )
-                logger.debug("Executed Pokemon Fainted sound event for player: ${player.name?.string}")
+                logger.debug("Executed Pokemon Fainted sound event at world position for entity: ${pkmEntity.name.string}")
+            } else {
+                // otherwise fallback to playing sound directly to everyone involved
+                event.battle.players.forEach { player ->
+                    player.playSoundToPlayer(
+                        ModSounds.BATTLE_FAINTED,
+                        PKMSOUND_CATEGORY,
+                        1.0f,
+                        1.0f
+                    )
+                    logger.debug("Executed Pokemon Fainted sound event for player: ${player.name?.string}")
+                }
             }
         }
     }
