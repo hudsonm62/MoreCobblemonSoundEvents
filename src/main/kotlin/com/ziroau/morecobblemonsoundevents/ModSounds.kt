@@ -32,13 +32,17 @@ object ModSounds {
 
     // via mixin
     @JvmField
-    val BATTLE_INVITE = registerSound("player.battle_invite")
+    val BATTLE_INVITE_SENT = registerSound("player.battle_invite.sent")
     @JvmField
-    val BATTLE_ACCEPT = registerSound("player.battle_accept")
+    val BATTLE_INVITE_RECEIVED = registerSound("player.battle_invite.received")
     @JvmField
-    val TRADE_INVITE = registerSound("player.trade_invite")
+    val BATTLE_ACCEPTED = registerSound("player.battle_accepted")
     @JvmField
-    val TRADE_ACCEPT = registerSound("player.trade_accept")
+    val TRADE_INVITE_SENT = registerSound("player.trade_invite.sent")
+    @JvmField
+    val TRADE_INVITE_RECEIVED = registerSound("player.trade_invite.received")
+    @JvmField
+    val TRADE_ACCEPTED = registerSound("player.trade_accepted")
     @JvmField
     val PKM_MOUNT = registerSound("pokemon.mount")
     @JvmField
