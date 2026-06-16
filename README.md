@@ -79,12 +79,12 @@ You can also browse existing Minecraft sounds via <https://minecraftsounds.com>!
 
 ## License
 
-This project is licensed under the **Apache License 2.0**. See the [LICENSE](LICENSE) file for full details.
+Packaged under Apache License 2.0, see [LICENSE] for more details.
 
-### Modpack Usage
+You may use this in your modpacks, all I ask is that you please link back to this [Modrinth Project](https://modrinth.com/project/zo9W5aiN) via a [manifest](https://support.modrinth.com/en/articles/8802351-modrinth-modpack-format-mrpack)!
 
-You are welcome to include this mod in modpacks. If you do so, please:
+<!--
+  LINKS BELOW
+-->
 
-- Credit the original author (me!).
-- Provide a link back to the mod's project page.
-- Prefer linking to the mod through your modpack's manifest rather than redistributing the JAR directly.
+[LICENSE]: https://raw.githubusercontent.com/hudsonm62/MoreCobblemonSoundEvents/refs/heads/master/LICENSE

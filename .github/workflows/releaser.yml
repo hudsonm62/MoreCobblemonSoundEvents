@@ -79,7 +79,7 @@ jobs:
           if-no-files-found: error
           compression-level: 9
 
-      - name: 🚀 Create Release
+      - name: 🚀 Create GitHub Release
         uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ steps.get-tag.outputs.version }}
@@ -88,3 +88,20 @@ jobs:
           prerelease: false
           append_body: true
           files: build/libs/MoreCobblemonSoundEvents-${{ steps.get-version.outputs.version }}.jar
+
+      - name: 🚀 Create Modrinth Release
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          modrinth-id: zo9W5aiN
+          modrinth-token: ${{ secrets.MODRINTH_PAT }}
+          files: build/libs/MoreCobblemonSoundEvents-${{ steps.get-version.outputs.version }}.jar
+          version: ${{ steps.get-version.outputs.version }}
+          name: More Cobblemon Sound Events ${{ steps.get-version.outputs.version }}
+          version-type: release
+          loaders: |
+            fabric
+          game-versions: |
+            1.21.1
+          fail-mode: fail
+          dependencies: |
+            cobblemon(required)
