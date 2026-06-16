@@ -103,7 +103,15 @@
             }
         ]
     },
-    "player.battle_invite": {
+    "pokemon.captured": {
+        "sounds": [
+            {
+                "name": "entity.player.levelup",
+                "type": "event"
+            }
+        ]
+    },
+    "player.battle_invite.sent": {
         "sounds": [
             {
                 "name": "block.note_block.pling",
@@ -111,7 +119,15 @@
             }
         ]
     },
-    "player.battle_accept": {
+    "player.battle_invite.received": {
+        "sounds": [
+            {
+                "name": "block.note_block.pling",
+                "type": "event"
+            }
+        ]
+    },
+    "player.battle_accepted": {
         "sounds": [
             {
                 "name": "block.note_block.bell",
@@ -119,7 +135,7 @@
             }
         ]
     },
-    "player.trade_invite": {
+    "player.trade_invite.sent": {
         "sounds": [
             {
                 "name": "block.note_block.snare",
@@ -127,7 +143,15 @@
             }
         ]
     },
-    "player.trade_accept": {
+    "player.trade_invite.received": {
+        "sounds": [
+            {
+                "name": "block.note_block.snare",
+                "type": "event"
+            }
+        ]
+    },
+    "player.trade_accepted": {
         "sounds": [
             {
                 "name": "entity.experience_orb.pickup",

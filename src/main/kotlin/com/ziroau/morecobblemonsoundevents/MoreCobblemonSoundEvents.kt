@@ -11,10 +11,10 @@ object MoreCobblemonSoundEvents : ModInitializer {
 	val logger: Logger = LoggerFactory.getLogger(MOD_ID)
 
 	override fun onInitialize() {
-		ModSounds.register()
+		EventSounds.register()
 		SoundEventHandler.register()
 		ResourcePackLoader.register()
-		logger.info("Loaded More Cobblemon Sound Events!")
+		logger.info("Finished Loading More Cobblemon Sound Events!")
 	}
 	fun id(path: String?): Identifier {
 		return Identifier.of(MOD_ID, path)

@@ -9,8 +9,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static com.ziroau.morecobblemonsoundevents.ModSounds.PKM_DISMOUNT;
-import static com.ziroau.morecobblemonsoundevents.ModSounds.PKM_MOUNT;
+import static com.ziroau.morecobblemonsoundevents.EventSounds.PKM_DISMOUNT;
+import static com.ziroau.morecobblemonsoundevents.EventSounds.PKM_MOUNT;
 import static com.ziroau.morecobblemonsoundevents.SoundEventHandler.PKMSOUND_CATEGORY;
 
 @Mixin(Entity.class)

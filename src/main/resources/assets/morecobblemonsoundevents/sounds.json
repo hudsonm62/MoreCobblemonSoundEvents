@@ -41,16 +41,22 @@
     "pokemon.captured": {
         "sounds": []
     },
-    "player.battle_invite": {
+    "player.battle_invite.sent": {
         "sounds": []
     },
-    "player.battle_accept": {
+    "player.battle_invite.received": {
         "sounds": []
     },
-    "player.trade_invite": {
+    "player.battle_accepted": {
         "sounds": []
     },
-    "player.trade_accept": {
+    "player.trade_invite.sent": {
+        "sounds": []
+    },
+    "player.trade_invite.received": {
+        "sounds": []
+    },
+    "player.trade_accepted": {
         "sounds": []
     }
 }
