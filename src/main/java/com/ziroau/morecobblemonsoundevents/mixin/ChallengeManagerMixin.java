@@ -7,9 +7,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static com.ziroau.morecobblemonsoundevents.ModSounds.BATTLE_INVITE_SENT;
-import static com.ziroau.morecobblemonsoundevents.ModSounds.BATTLE_INVITE_RECEIVED;
-import static com.ziroau.morecobblemonsoundevents.ModSounds.BATTLE_ACCEPTED;
+import static com.ziroau.morecobblemonsoundevents.EventSounds.BATTLE_INVITE_SENT;
+import static com.ziroau.morecobblemonsoundevents.EventSounds.BATTLE_INVITE_RECEIVED;
+import static com.ziroau.morecobblemonsoundevents.EventSounds.BATTLE_ACCEPTED;
 import static com.ziroau.morecobblemonsoundevents.SoundEventHandler.SOUND_CATEGORY;
 
 @Mixin(value = ChallengeManager.class, remap = false)

@@ -9,9 +9,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static com.ziroau.morecobblemonsoundevents.ModSounds.TRADE_INVITE_SENT;
-import static com.ziroau.morecobblemonsoundevents.ModSounds.TRADE_INVITE_RECEIVED;
-import static com.ziroau.morecobblemonsoundevents.ModSounds.TRADE_ACCEPTED;
+import static com.ziroau.morecobblemonsoundevents.EventSounds.TRADE_INVITE_SENT;
+import static com.ziroau.morecobblemonsoundevents.EventSounds.TRADE_INVITE_RECEIVED;
+import static com.ziroau.morecobblemonsoundevents.EventSounds.TRADE_ACCEPTED;
 import static com.ziroau.morecobblemonsoundevents.SoundEventHandler.SOUND_CATEGORY;
 
 @Mixin(value = TradeManager.class, remap = false)

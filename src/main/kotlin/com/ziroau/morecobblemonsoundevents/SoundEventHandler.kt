@@ -20,11 +20,11 @@ object SoundEventHandler {
             if(winningPlayers.isNotEmpty()){
                 val winSound: SoundEvent = 
                     if (event.battle.isPvW)
-                        ModSounds.BATTLE_PVW_WIN
+                        EventSounds.BATTLE_PVW_WIN
                     else if (event.battle.isPvP)
-                        ModSounds.BATTLE_PVP_WIN
+                        EventSounds.BATTLE_PVP_WIN
                     else
-                        ModSounds.BATTLE_PVN_WIN
+                        EventSounds.BATTLE_PVN_WIN
 
                 winningPlayers.forEach { player ->
                     player.playSoundToPlayer(
@@ -43,11 +43,11 @@ object SoundEventHandler {
 
             val lossSound: SoundEvent =
                 if (event.battle.isPvW)
-                    ModSounds.BATTLE_PVW_LOSS
+                    EventSounds.BATTLE_PVW_LOSS
                 else if (event.battle.isPvP)
-                    ModSounds.BATTLE_PVP_LOSS
+                    EventSounds.BATTLE_PVP_LOSS
                 else
-                    ModSounds.BATTLE_PVN_LOSS
+                    EventSounds.BATTLE_PVN_LOSS
                 
             if(losingPlayers.isNotEmpty()){
                 losingPlayers.forEach { player ->
@@ -64,11 +64,11 @@ object SoundEventHandler {
         CobblemonEvents.BATTLE_FLED.subscribe { event ->
             val fledSound: SoundEvent =
                 if (event.battle.isPvW)
-                    ModSounds.BATTLE_PVW_FLED
+                    EventSounds.BATTLE_PVW_FLED
                 else if (event.battle.isPvP)
-                    ModSounds.BATTLE_PVP_FLED
+                    EventSounds.BATTLE_PVP_FLED
                 else
-                    ModSounds.BATTLE_PVN_FLED
+                    EventSounds.BATTLE_PVN_FLED
 
             val player = event.player.entity
             player?.playSoundToPlayer(
@@ -83,7 +83,7 @@ object SoundEventHandler {
         CobblemonEvents.STARTER_CHOSEN.subscribe { event ->
             val player = event.player
             player.playSoundToPlayer(
-                ModSounds.STARTER_CHOSEN,
+                EventSounds.STARTER_CHOSEN,
                 SOUND_CATEGORY,
                 1.0f,
                 1.0f
@@ -99,7 +99,7 @@ object SoundEventHandler {
                 thisWorld.playSoundFromEntity(
                     null,
                     pkmEntity,
-                    ModSounds.BATTLE_FAINTED,
+                    EventSounds.BATTLE_FAINTED,
                     PKMSOUND_CATEGORY,
                     1.0f,
                     1.0f
@@ -109,7 +109,7 @@ object SoundEventHandler {
                 // otherwise fallback to playing sound directly to everyone involved
                 event.battle.players.forEach { player ->
                     player.playSoundToPlayer(
-                        ModSounds.BATTLE_FAINTED,
+                        EventSounds.BATTLE_FAINTED,
                         PKMSOUND_CATEGORY,
                         1.0f,
                         1.0f
@@ -121,7 +121,7 @@ object SoundEventHandler {
         CobblemonEvents.POKEMON_CAPTURED.subscribe { event ->
             val player = event.player
             player.playSoundToPlayer(
-                ModSounds.PKM_CAPTURED,
+                EventSounds.PKM_CAPTURED,
                 PKMSOUND_CATEGORY,
                 1.0f,
                 1.0f

@@ -5,7 +5,7 @@ import net.minecraft.registry.Registry
 import net.minecraft.sound.SoundEvent
 import net.minecraft.util.Identifier
 
-object ModSounds {
+object EventSounds {
     private data class CobbleSound(val id: Identifier, val sound: SoundEvent)
     private val sounds = mutableListOf<CobbleSound>()
 
