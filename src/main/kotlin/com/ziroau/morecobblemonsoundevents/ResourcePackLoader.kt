@@ -2,6 +2,7 @@ package com.ziroau.morecobblemonsoundevents
 
 import com.ziroau.morecobblemonsoundevents.MoreCobblemonSoundEvents.MOD_ID
 import com.ziroau.morecobblemonsoundevents.MoreCobblemonSoundEvents.id
+import com.ziroau.morecobblemonsoundevents.MoreCobblemonSoundEvents.logger
 import net.fabricmc.api.EnvType.CLIENT
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper.registerBuiltinResourcePack
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType.NORMAL
@@ -19,6 +20,7 @@ object ResourcePackLoader {
                 Text.translatable("resourcePack.${MOD_ID}.demo_pack"),
                 NORMAL
             )
+            logger.info("Client loaded Demo Sound Event RP")
         }
     }
 }

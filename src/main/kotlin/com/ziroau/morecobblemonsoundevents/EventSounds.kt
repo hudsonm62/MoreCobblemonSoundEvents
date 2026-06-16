@@ -1,5 +1,6 @@
 package com.ziroau.morecobblemonsoundevents
 
+import com.ziroau.morecobblemonsoundevents.MoreCobblemonSoundEvents.logger
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
 import net.minecraft.sound.SoundEvent
@@ -26,8 +27,8 @@ object EventSounds {
     val BATTLE_PVW_WIN = registerSound("battle.pvw.win")
     val BATTLE_PVW_LOSS = registerSound("battle.pvw.loss")
     val BATTLE_PVW_FLED = registerSound("battle.pvw.fled")
-    val STARTER_CHOSEN = registerSound("pokemon.starter_chosen")
     val BATTLE_FAINTED = registerSound("battle.fainted")
+    val STARTER_CHOSEN = registerSound("pokemon.starter_chosen")
     val PKM_CAPTURED = registerSound("pokemon.captured")
 
     // via mixin
@@ -49,12 +50,19 @@ object EventSounds {
     val PKM_DISMOUNT = registerSound("pokemon.dismount")
 
     fun register() {
+        var registeredAmount = 0
         sounds.forEach { entry ->
-            Registry.register(
-                Registries.SOUND_EVENT,
-                entry.id,
-                entry.sound
-            )
+            try {
+                Registry.register(
+                    Registries.SOUND_EVENT,
+                    entry.id,
+                    entry.sound
+                )
+                registeredAmount++
+            } catch (e: Exception) {
+                logger.error("Failed to register Cobblemon Sound Event: ${entry.id}", e)
+            }
         }
+        logger.info("Loaded '$registeredAmount' More Cobblemon Sound Events!")
     }
 }
