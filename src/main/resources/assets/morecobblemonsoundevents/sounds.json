@@ -41,6 +41,9 @@
     "pokemon.captured": {
         "sounds": []
     },
+    "pokemon.healed": {
+        "sounds": []
+    },
     "player.battle_invite.sent": {
         "sounds": []
     },
