@@ -71,14 +71,14 @@ object SoundEventHandler {
                 else
                     EventSounds.BATTLE_PVN_FLED
 
-            val player = event.player.entity
-            player?.playSoundToPlayer(
+            val player = event.player.entity ?: return@subscribe
+            player.playSoundToPlayer(
                 fledSound,
                 MASTER_CATEGORY,
                 1.0f,
                 1.0f
             )
-            logger.debug("Executed battle FLED sound event for player: ${player?.name?.string}")
+            logger.debug("Executed battle FLED sound event for player: ${player.name.string}")
         }
 
         CobblemonEvents.STARTER_CHOSEN.subscribe { event ->
