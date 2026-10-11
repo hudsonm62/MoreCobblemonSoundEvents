@@ -1,4 +1,4 @@
-package com.ziroau.morecobblemonsoundevents
+package com.ziroau.morecobblemonsoundevents.sounds
 
 import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.battles.actor.PlayerBattleActor

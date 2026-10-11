@@ -1,5 +1,6 @@
-package com.ziroau.morecobblemonsoundevents
+package com.ziroau.morecobblemonsoundevents.sounds
 
+import com.ziroau.morecobblemonsoundevents.MoreCobblemonSoundEvents
 import com.ziroau.morecobblemonsoundevents.MoreCobblemonSoundEvents.logger
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry

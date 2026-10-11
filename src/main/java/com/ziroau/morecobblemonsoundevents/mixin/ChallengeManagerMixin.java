@@ -7,10 +7,10 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static com.ziroau.morecobblemonsoundevents.EventSounds.BATTLE_INVITE_SENT;
-import static com.ziroau.morecobblemonsoundevents.EventSounds.BATTLE_INVITE_RECEIVED;
-import static com.ziroau.morecobblemonsoundevents.EventSounds.BATTLE_ACCEPTED;
-import static com.ziroau.morecobblemonsoundevents.SoundEventHandler.SOUND_CATEGORY;
+import static com.ziroau.morecobblemonsoundevents.sounds.EventSounds.BATTLE_INVITE_SENT;
+import static com.ziroau.morecobblemonsoundevents.sounds.EventSounds.BATTLE_INVITE_RECEIVED;
+import static com.ziroau.morecobblemonsoundevents.sounds.EventSounds.BATTLE_ACCEPTED;
+import static com.ziroau.morecobblemonsoundevents.sounds.SoundEventHandler.SOUND_CATEGORY;
 
 @Mixin(value = ChallengeManager.class, remap = false)
 public abstract class ChallengeManagerMixin {

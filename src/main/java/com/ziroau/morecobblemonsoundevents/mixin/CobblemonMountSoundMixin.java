@@ -9,9 +9,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static com.ziroau.morecobblemonsoundevents.EventSounds.PKM_DISMOUNT;
-import static com.ziroau.morecobblemonsoundevents.EventSounds.PKM_MOUNT;
-import static com.ziroau.morecobblemonsoundevents.SoundEventHandler.PKMSOUND_CATEGORY;
+import static com.ziroau.morecobblemonsoundevents.sounds.EventSounds.PKM_DISMOUNT;
+import static com.ziroau.morecobblemonsoundevents.sounds.EventSounds.PKM_MOUNT;
+import static com.ziroau.morecobblemonsoundevents.sounds.SoundEventHandler.PKMSOUND_CATEGORY;
 
 @Mixin(Entity.class)
 public abstract class CobblemonMountSoundMixin {

@@ -11,20 +11,18 @@ import net.minecraft.text.Text
 
 object ResourcePackLoader {
     fun register() {
-        val instance = FabricLoader.getInstance()
-        if (instance.environmentType == CLIENT) {
-            val container = instance.getModContainer(MOD_ID).orElse(null)
-            if(container != null) {
-                registerBuiltinResourcePack(
-                    id("demo_pack"),
-                    container,
-                    Text.translatable("resourcePack.${MOD_ID}.demo_pack"),
-                    NORMAL
-                )
-                logger.info("Client loaded Demo Sound Event RP")
-            } else {
-                logger.error("Failed to load Demo Sound Event RP: Mod container not found?")
-            }
+        val container = FabricLoader.getInstance()
+            .getModContainer(MOD_ID).orElse(null)
+        if(container != null) {
+            registerBuiltinResourcePack(
+                id("demo_pack"),
+                container,
+                Text.translatable("resourcePack.${MOD_ID}.demo_pack"),
+                NORMAL
+            )
+            logger.info("Client loaded Demo Sound Event RP")
+        } else {
+            logger.error("Failed to load Demo Sound Event RP: Mod container not found?")
         }
     }
 }
