@@ -31,6 +31,7 @@ object EventSounds {
     val BATTLE_FAINTED = registerSound("battle.fainted")
     val STARTER_CHOSEN = registerSound("pokemon.starter_chosen")
     val PKM_CAPTURED = registerSound("pokemon.captured")
+    val PKM_HEALED = registerSound("pokemon.healed")
 
     // via mixin
     @JvmField

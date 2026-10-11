@@ -3,12 +3,13 @@ package com.ziroau.morecobblemonsoundevents.sounds
 import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.battles.actor.PlayerBattleActor
 import com.ziroau.morecobblemonsoundevents.MoreCobblemonSoundEvents.logger
+import net.minecraft.server.network.ServerPlayerEntity
 import net.minecraft.sound.SoundCategory
 import net.minecraft.sound.SoundEvent
 
 object SoundEventHandler {
     @JvmField
-    val SOUND_CATEGORY = SoundCategory.MASTER // everything else
+    val MASTER_CATEGORY = SoundCategory.MASTER // everything else
     @JvmField
     val PKMSOUND_CATEGORY = SoundCategory.NEUTRAL // for sounds originating from mons
     fun register() {
@@ -29,7 +30,7 @@ object SoundEventHandler {
                 winningPlayers.forEach { player ->
                     player.playSoundToPlayer(
                         winSound,
-                        SOUND_CATEGORY,
+                        MASTER_CATEGORY,
                         1.0f,
                         1.0f
                     )
@@ -53,7 +54,7 @@ object SoundEventHandler {
                 losingPlayers.forEach { player ->
                     player.playSoundToPlayer(
                         lossSound,
-                        SOUND_CATEGORY,
+                        MASTER_CATEGORY,
                         1.0f,
                         1.0f
                     )
@@ -73,7 +74,7 @@ object SoundEventHandler {
             val player = event.player.entity
             player?.playSoundToPlayer(
                 fledSound,
-                SOUND_CATEGORY,
+                MASTER_CATEGORY,
                 1.0f,
                 1.0f
             )
@@ -84,7 +85,7 @@ object SoundEventHandler {
             val player = event.player
             player.playSoundToPlayer(
                 EventSounds.STARTER_CHOSEN,
-                SOUND_CATEGORY,
+                MASTER_CATEGORY,
                 1.0f,
                 1.0f
             )
@@ -127,6 +128,17 @@ object SoundEventHandler {
                 1.0f
             )
             logger.debug("Executed Pokemon Captured sound event for player: ${player.name?.string}")
+        }
+        CobblemonEvents.POKEMON_HEALED.subscribe { event ->
+            val player = event.pokemon.getOwnerEntity() as? ServerPlayerEntity ?: return@subscribe
+
+            player.playSoundToPlayer(
+                EventSounds.PKM_HEALED,
+                MASTER_CATEGORY,
+                1.0f,
+                1.0f
+            )
+            logger.debug("Executed Pokemon Healed sound event for player: ${player.name.string}")
         }
     }
 }

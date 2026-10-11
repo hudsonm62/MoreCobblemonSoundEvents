@@ -111,6 +111,14 @@
             }
         ]
     },
+    "pokemon.healed": {
+        "sounds": [
+            {
+                "name": "entity.player.levelup",
+                "type": "event"
+            }
+        ]
+    },
     "player.battle_invite.sent": {
         "sounds": [
             {

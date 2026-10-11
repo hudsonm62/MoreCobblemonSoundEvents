@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import static com.ziroau.morecobblemonsoundevents.sounds.EventSounds.BATTLE_INVITE_SENT;
 import static com.ziroau.morecobblemonsoundevents.sounds.EventSounds.BATTLE_INVITE_RECEIVED;
 import static com.ziroau.morecobblemonsoundevents.sounds.EventSounds.BATTLE_ACCEPTED;
-import static com.ziroau.morecobblemonsoundevents.sounds.SoundEventHandler.SOUND_CATEGORY;
+import static com.ziroau.morecobblemonsoundevents.sounds.SoundEventHandler.MASTER_CATEGORY;
 
 @Mixin(value = ChallengeManager.class, remap = false)
 public abstract class ChallengeManagerMixin {
@@ -23,13 +23,13 @@ public abstract class ChallengeManagerMixin {
         ServerPlayerEntity receiver = request.getReceiver();
         sender.playSoundToPlayer(
                 BATTLE_INVITE_SENT,
-                SOUND_CATEGORY,
+                MASTER_CATEGORY,
                 1.0F,
                 1.0F
         );
         receiver.playSoundToPlayer(
                 BATTLE_INVITE_RECEIVED,
-                SOUND_CATEGORY,
+                MASTER_CATEGORY,
                 1.0F,
                 1.0F
         );
@@ -43,13 +43,13 @@ public abstract class ChallengeManagerMixin {
         ServerPlayerEntity receiver = request.getReceiver();
         sender.playSoundToPlayer(
                 BATTLE_ACCEPTED,
-                SOUND_CATEGORY,
+                MASTER_CATEGORY,
                 1.0F,
                 1.0F
         );
         receiver.playSoundToPlayer(
                 BATTLE_ACCEPTED,
-                SOUND_CATEGORY,
+                MASTER_CATEGORY,
                 1.0F,
                 1.0F
         );

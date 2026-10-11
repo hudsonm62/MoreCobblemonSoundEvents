@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import static com.ziroau.morecobblemonsoundevents.sounds.EventSounds.TRADE_INVITE_SENT;
 import static com.ziroau.morecobblemonsoundevents.sounds.EventSounds.TRADE_INVITE_RECEIVED;
 import static com.ziroau.morecobblemonsoundevents.sounds.EventSounds.TRADE_ACCEPTED;
-import static com.ziroau.morecobblemonsoundevents.sounds.SoundEventHandler.SOUND_CATEGORY;
+import static com.ziroau.morecobblemonsoundevents.sounds.SoundEventHandler.MASTER_CATEGORY;
 
 @Mixin(value = TradeManager.class, remap = false)
 public abstract class TradeManagerMixin {
@@ -25,13 +25,13 @@ public abstract class TradeManagerMixin {
         ServerPlayerEntity receiver = request.getReceiver();
         sender.playSoundToPlayer(
                 TRADE_INVITE_SENT,
-                SOUND_CATEGORY,
+                MASTER_CATEGORY,
                 1.0F,
                 1.0F
         );
         receiver.playSoundToPlayer(
                 TRADE_INVITE_RECEIVED,
-                SOUND_CATEGORY,
+                MASTER_CATEGORY,
                 1.0F,
                 1.0F
         );
@@ -45,13 +45,13 @@ public abstract class TradeManagerMixin {
         ServerPlayerEntity receiver = request.getReceiver();
         sender.playSoundToPlayer(
                 TRADE_ACCEPTED,
-                SOUND_CATEGORY,
+                MASTER_CATEGORY,
                 1.0F,
                 1.0F
         );
         receiver.playSoundToPlayer(
                 TRADE_ACCEPTED,
-                SOUND_CATEGORY,
+                MASTER_CATEGORY,
                 1.0F,
                 1.0F
         );
